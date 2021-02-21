@@ -1,0 +1,30 @@
+$primary-color: #4e9ff5;
+$secondary-color: #dddd44;
+
+.nav-link {
+  text-decoration: none;
+}
+
+.navbar-brand,
+.navbar-link {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-brand {
+  color: $primary-color;
+  font-size: 1.5rem;
+}
+
+.navbar-link {
+  color: "#fff";
+  font-size: 1.25rem;
+}
+
+.container {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.click-link {
+  color: $secondary-color;
+}

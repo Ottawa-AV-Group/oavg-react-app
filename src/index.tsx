@@ -1,14 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./styles.scss";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+
+import { BrowserRouter } from "react-router-dom";
+
+import firebase from "firebase/app";
+import "firebase/analytics";
+
+const firebaseConfig = {};
+
+firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter basename="oavg-react-app">
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
