@@ -9,7 +9,9 @@ import { BrowserRouter } from "react-router-dom";
 import firebase from "firebase/app";
 import "firebase/analytics";
 
-const firebaseConfig = {};
+const firebaseConfig = {
+  apiKey: `AIzaSyDGHwfW3pX2f_A7hO5bUhgWdhg1i5Z2Y50`,
+};
 
 firebase.initializeApp(firebaseConfig);
 

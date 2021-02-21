@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
+import firebase from "firebase";
 
-type User = Object | undefined;
-export default User;
+export type User = null | firebase.User;
 
 export type UserState = { user: User };
 export type UserPayload = { nextUser: User };
@@ -11,14 +11,14 @@ export function userReducer(state: UserState, action: UserPayload): UserState {
 }
 
 export const UserStateContext = React.createContext<UserState>({
-  user: undefined,
+  user: null,
 });
 export const UserDispatchContext = React.createContext<
   undefined | React.Dispatch<UserPayload>
 >(undefined);
 
 export const UserProvider: FunctionComponent = ({ children }) => {
-  const [state, dispatch] = React.useReducer(userReducer, { user: undefined });
+  const [state, dispatch] = React.useReducer(userReducer, { user: null });
 
   return (
     <UserStateContext.Provider value={state}>

@@ -2,9 +2,14 @@ import { Link } from "react-router-dom";
 import { AppBar, Button, Toolbar, Grid } from "@material-ui/core";
 import React from "react";
 
+import { UserStateContext } from "./login/user";
+
 import LoginButton from "./login/loginButton";
+import LogoutButton from "./login/logoutButton";
 
 export default function Nav() {
+  const { user } = React.useContext(UserStateContext);
+
   return (
     <React.Fragment>
       <AppBar position="static" color="transparent">
@@ -23,9 +28,7 @@ export default function Nav() {
             </Toolbar>
           </Grid>
           <Grid item>
-            <Toolbar>
-              <LoginButton />
-            </Toolbar>
+            <Toolbar>{user ? <LogoutButton /> : <LoginButton />}</Toolbar>
           </Grid>
         </Grid>
       </AppBar>
