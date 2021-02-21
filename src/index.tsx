@@ -17,7 +17,7 @@ firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename="oavg-react-app">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
